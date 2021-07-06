@@ -13,7 +13,7 @@ constructor(props){
 }
 
 componentDidMount= async()=>{
-const Url ='http://localhost:3010'
+const Url ='https://i401exam.herokuapp.com'
 const getUrl = await axios.get(`${Url}/all`)
 console.log(getUrl.data)
 this.setState({
@@ -22,7 +22,7 @@ this.setState({
 }
 
 addFav=async(index)=>{
-    const Url ='http://localhost:3010'
+    const Url ='https://i401exam.herokuapp.com'
     const obj = {
         strDrink:this.state.info[index].strDrink,
         strDrinkThumb:this.state.info[index].strDrinkThumb

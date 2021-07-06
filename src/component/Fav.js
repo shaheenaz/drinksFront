@@ -21,7 +21,7 @@ class Fav extends React.Component{
 
 
     componentDidMount= async()=>{
-        const Url ='http://localhost:3010'
+        const Url ='https://i401exam.herokuapp.com'
         const mUrl = await axios.get(`${Url}/getfav`)
         console.log(mUrl.data)
         this.setState({
@@ -29,7 +29,7 @@ class Fav extends React.Component{
         })
         }
 delete =async(index)=>{
-    const Url ='http://localhost:3010'
+    const Url ='https://i401exam.herokuapp.com'
     const deleteUrl = await axios.delete(`${Url}/getFav?id=${index}`)
     this.setState({
         favInfo:deleteUrl.data
@@ -55,7 +55,7 @@ handleClose = ()=>{
 
 update =async(event) =>{
     event.preventDefault()
-    const url = 'http://localhost:3010'
+    const url = 'https://i401exam.herokuapp.com'
     const obj = {
         strDrink:event.target.strDrink.value,
         strDrinkThumb:event.target.strDrinkThumb.value,
